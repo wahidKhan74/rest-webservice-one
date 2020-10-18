@@ -1,6 +1,7 @@
 package com.ecomerce.webapp.service;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
@@ -27,6 +28,10 @@ public class PersonService {
 	
 	public Optional<PersonEntity> getPerson(int pid) {
 		return personRepository.findById(pid);
+	}
+	
+	public List<PersonEntity> getAllPerson() {
+		return personRepository.findAll();
 	}
 	
 	public PersonResponse getPersonWithHobby(int pid) {
